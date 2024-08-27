@@ -1,4 +1,4 @@
-# README.md for Ledger and Transactions Management System Using MERN Stack
+# Ledger and Transactions Management System Using MERN Stack
 
 ## Project Overview
 
