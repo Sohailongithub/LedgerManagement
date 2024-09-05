@@ -3,17 +3,17 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-// Import routes
-const ledgerRoutes = require('../server/routes/ledgerRoutes');
-const transactionRoutes = require('../server/routes/transactionRoutes');
-const reportRoutes = require('../server/routes/reportRoutes');
+// Connect to MongoDB
+mongoose.connect('mongodb+srv://batch6:herovired@cluster0.aqifkg2.mongodb.net/ledgerDB');
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// Connect to MongoDB
-mongoose.connect('mongodb+srv://batch6:herovired@cluster0.aqifkg2.mongodb.net/ledgerDB');
+// Import routes
+const ledgerRoutes = require('../server/routes/ledgerRoutes');
+const transactionRoutes = require('../server/routes/transactionRoutes');
+const reportRoutes = require('../server/routes/reportRoutes');
 
 // API Routes
 app.use('/api/ledgers', ledgerRoutes);
